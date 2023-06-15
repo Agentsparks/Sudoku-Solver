@@ -24,25 +24,22 @@ def find_zero(board):
                 return([i,j])
                 
 def is_valid(board,row,col,value):
-    c1 = False
-    c2 = False
     for x in board[row]:
         if x == value:
             return False
-        else:
-            c1 = True
     for x in range(len(board)):
         if board[x][col] == value:
             return False
-        else:
-            c2 = True
-    if c1 and c2:
-        return True
-
-
+    square_row = row // 3
+    square_col = col // 3
+    for i in range(3):
+        for j in range(3):
+            if board[square_row*3 + i][square_col*3 + j] == value:
+                return False
+    return True
 print_board(board)
 print(find_zero(board))
-print(is_valid(board, 1,1,8))
+print(is_valid(board, 0,5,8))
 
 def solve(board):
     zero = find_zero(board)
@@ -53,10 +50,11 @@ def solve(board):
     for x in range(1,10):
         if is_valid(board,i,j,x):
             board[i][j] = x
-            # print(x)
             solution = solve(board)
+            print_board(board)
+            print('-------------------------')
             if solution is not None:
                 return solution
             board[i][j] = 0
-        return None
-print(solve(board))
+    return None
+    #print(solve(board))
