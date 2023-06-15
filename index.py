@@ -39,7 +39,7 @@ def is_valid(board,row,col,value):
     return True
 print_board(board)
 print(find_zero(board))
-print(is_valid(board, 0,5,8))
+print(is_valid(board, 7,1,8))
 
 def solve(board):
     zero = find_zero(board)
@@ -57,4 +57,4 @@ def solve(board):
                 return solution
             board[i][j] = 0
     return None
-    #print(solve(board))
+print(solve(board))
