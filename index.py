@@ -1,3 +1,5 @@
+import time
+
 board = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
 [6, 0, 0, 1, 9, 5, 0, 0, 0],
 [0, 9, 8, 0, 0, 0, 0, 6, 0],
@@ -38,9 +40,8 @@ def is_valid(board,row,col,value):
                 return False
     return True
 print_board(board)
-print(find_zero(board))
-print(is_valid(board, 7,1,8))
 
+time.sleep(1)
 def solve(board):
     zero = find_zero(board)
     if zero == None:
