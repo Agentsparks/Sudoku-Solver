@@ -15,6 +15,6 @@ Is_Valid(board, row, col, value): given a sudoku matrix, a numerical value, and 
 placement of the numerical value is legal in the current state of the sudoku board.
 
 Solve(board): Given a board, recursion and backtracking is used to solve the sudoku board. Using the Find Zero() function, the AI searches for the first zero, and tries every value on it. For every value, 
-it checks if that value is valid on those coordinates using the Is_Valid() function. If it isn't valid, the loops moves to the next value.  If it is, then it sets that value to that very position and recurses 
+it checks if that value is valid on those coordinates using the Is_Valid() function. If it isn't valid, the loop moves to the next value.  If it is, then it sets that value to that very position and recurses 
 solve(board) again. However, if none of the values work, then the AI utilises backtracking, which sets that value back to zero and so on so forth until a better value is discovered in a previous state of the 
 sudoku board. If the entire board is solved, then the board is returned in the print_board() function.
