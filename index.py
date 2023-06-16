@@ -43,18 +43,14 @@ print(is_valid(board, 7,1,8))
 
 def solve(board):
     zero = find_zero(board)
-    i = zero[0]
-    j = zero[1]
     if zero == None:
         return board
     for x in range(1,10):
-        if is_valid(board,i,j,x):
-            board[i][j] = x
+        if is_valid(board,zero[0],zero[1],x):
+            board[zero[0]][zero[1]] = x
             solution = solve(board)
-            print_board(board)
-            print('-------------------------')
             if solution is not None:
                 return solution
-            board[i][j] = 0
+            board[zero[0]][zero[1]] = 0
     return None
-print(solve(board))
+print_board(solve(board))
