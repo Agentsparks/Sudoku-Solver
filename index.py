@@ -49,6 +49,8 @@ def solve(board):
         if is_valid(board,zero[0],zero[1],x):
             board[zero[0]][zero[1]] = x
             solution = solve(board)
+            print_board(board)
+            print('---------------------------------')
             if solution is not None:
                 return solution
             board[zero[0]][zero[1]] = 0
