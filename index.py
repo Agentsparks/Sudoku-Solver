@@ -11,6 +11,18 @@ board = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
 [0, 0, 0, 0, 8, 0, 0, 7, 9]]
 
 
+board2 = [[7, 0, 9, 6, 8, 4, 0, 0, 0],
+[0, 3, 0, 2, 0, 0, 0, 0, 8],
+[0, 6, 8, 1, 3, 0, 2, 7, 0],
+[2, 0, 6, 5, 4, 8, 0, 0, 1],
+[0, 0, 1, 3, 0, 2, 0, 0, 5],
+[5, 0, 0, 0, 0, 0, 7, 8, 2],
+[3, 5, 2, 0, 0, 0, 8, 9, 4],
+[0, 0, 4, 8, 0, 9, 3, 0, 7],
+[0, 0, 0, 0, 2, 3, 0, 0, 6],]
+
+
+
 
 def print_board(board):
     for x in board:
@@ -24,7 +36,6 @@ def find_zero(board):
         for j, y in enumerate(x):
             if y == 0:
                 return([i,j])
-                
 def is_valid(board,row,col,value):
     for x in board[row]:
         if x == value:
