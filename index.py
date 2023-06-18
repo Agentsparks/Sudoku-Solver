@@ -32,7 +32,7 @@ board2 = [[7, 0, 9, 6, 8, 4, 0, 0, 0],
 [0, 0, 4, 8, 0, 9, 3, 0, 7],
 [0, 0, 0, 0, 2, 3, 0, 0, 6],]
 
-
+print(empty_board)
 
 
 def print_board(board):
