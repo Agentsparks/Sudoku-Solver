@@ -59,9 +59,8 @@ def is_valid(board,row,col,value):
             if board[square_row*3 + i][square_col*3 + j] == value:
                 return False
     return True
-print_board(board2)
 
-time.sleep(1)
+
 def solve(board):
     zero = find_zero(board)
     if zero == None:
@@ -74,5 +73,6 @@ def solve(board):
                 return solution
             board[zero[0]][zero[1]] = 0
     return None
+print(board)
 print('-----------------------------------')
-print_board(solve(board2))
+print_board(solve(board))
