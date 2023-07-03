@@ -1,5 +1,6 @@
 import time
 
+
 empty_board = [[0, 0, 0, 0, 0, 0, 0, 0, 0],
 [0, 0, 0, 0, 0, 0, 0, 0, 0],
 [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -73,6 +74,6 @@ def solve(board):
                 return solution
             board[zero[0]][zero[1]] = 0
     return None
-print(board)
+print_board(empty_board)
 print('-----------------------------------')
-print_board(solve(board))
+print_board(solve(empty_board))
